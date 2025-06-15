@@ -1,4 +1,4 @@
-import { spmatNo } from "./sparePart.type";
+import { spmatNo } from "./common/sparePart.type";
 
 export interface CardRowed extends product {
   id?: string;
