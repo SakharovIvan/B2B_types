@@ -1,4 +1,4 @@
-import { spmatNo } from "./sparePart.type";
+import { SparePart, spmatNo } from "./sparePart.type";
 
 export interface CardRowed extends product {
   id?: string;
@@ -22,6 +22,6 @@ export type product = spmatNo & {
   UserComment: string;
 };
 
-export type productCheck = product & {
+export type productCheck = product& SparePart & {
   analog: product[] | [];
 };
