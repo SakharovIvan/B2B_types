@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package user;
+
+service UserService {
+  rpc FindOneByJWT (GetUserRequest) returns (User);
+}
+
+message GetUserRequest {
+  string accessToken = 1;
+}
+
+message User {
+  string id = 1;
+  string email = 2;
+  string user = 3;
+}
