@@ -29,6 +29,11 @@ enum DSO_REGION {
   "",
 }
 
+enum ROLES_LIST{
+  "ASC",
+  "ADMIN"
+}
+
 export interface CliInfo {
   id?: string;
   ASCInfo_ID: string;
@@ -42,10 +47,10 @@ export interface CliInfo {
 }
 
 export interface Roles {
-  id: string;
+  id?: string;
   email: string;
   admin: boolean;
-  type: string;
-  createdAt: Date;
-  updatedAt: Date;
+  type: ROLES_LIST;
+  createdAt?: Date;
+  updatedAt?: Date;
 }
