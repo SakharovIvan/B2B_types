@@ -4,6 +4,41 @@ package user;
 
 service UserService {
   rpc FindOneByJWT (GetUserRequest) returns (User);
+  rpc UserRole (GetUserRequest) returns (Role);
+  rpc CustomerInfo(GetUserRequest) returns (Customer);
+  rpc UpdateUserRole (Role) returns (Role);
+  rpc UpsertCustomerInfo (Customer) returns (Customer);
+}
+
+message Role {
+  bool admin = 1;
+  string type = 2;
+  string email = 3; 
+}
+
+message Customer{
+  int32 gis_code = 1;
+  string C1_code = 2;
+  string organization_name = 3;
+  string Indeks = 4;
+  string addres = 5;
+  string Tlf = 6;
+  string email = 7;
+  string Raschet_schet_bank = 8;
+  string Korr_schet_bank = 9;
+  string BIK_bank = 10;
+  string Name_bank = 11;
+  string OKPO = 12;
+  string email_2 = 13;
+  int32 skid = 14;
+  string contract_DSO = 15;
+  string contract_DSO_date = 16;
+  string contract_shipment = 17;
+  string contract_shipment_date = 18;
+  int32 DSO_region = 19;
+  string CliInfo_ID = 20;
+  string KPP = 21;
+  string organization_INN =22 ;
 }
 
 message GetUserRequest {
