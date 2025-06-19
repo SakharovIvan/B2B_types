@@ -6,12 +6,11 @@ service UserService {
   rpc FindOneByJWT (GetUserRequest) returns (User);
   rpc GetUserRole (GetUserRequest) returns (Role);
   rpc UpdateUserRole (Role) returns (Role);
-
   rpc GetClientInfo(GetUserRequest) returns (CliInfo);
-  rpc getASCInfo(CliInfo|User) return (ASCInfo);
+  rpc getASCInfo(CliInfo) return (ASCInfo);
   rpc UpsertASCInfo (ASCInfo) returns (ASCInfo);
   rpc CheckClientASCInfo(CliInfo) returns (ASCInfo);
-  rpc CommitClientASCInfo(CliInfo) returns (ASCInfo);
+  rpc CommitClientASCInfo(CliInfo) returns (CliInfo);
 
 }
 
