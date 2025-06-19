@@ -29,9 +29,20 @@ enum DSO_REGION {
   "",
 }
 
-enum ROLES_LIST{
+export enum ROLES_LIST{
   "ASC",
   "ADMIN"
+}
+
+export interface UserModel{
+  id:string;
+  email:string;
+  password:string;
+  isActivated: boolean;
+  activationLink: string;
+  createdAt: Date;
+  updatedAt: Date;
+
 }
 
 export interface CliInfo {
@@ -43,6 +54,7 @@ export interface CliInfo {
   organization_INN: string;
   organization_FIO: string;
   organization_agreement: boolean;
+  UserModel_ID:string;
   createdAt?: Date;
 }
 
@@ -54,3 +66,5 @@ export interface Roles {
   createdAt?: Date;
   updatedAt?: Date;
 }
+
+export interface registrationInfo extends Partial<CliInfo>,Partial<UserModel>{}

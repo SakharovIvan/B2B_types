@@ -4,10 +4,15 @@ package user;
 
 service UserService {
   rpc FindOneByJWT (GetUserRequest) returns (User);
-  rpc UserRole (GetUserRequest) returns (Role);
-  rpc CustomerInfo(GetUserRequest) returns (Customer);
+  rpc GetUserRole (GetUserRequest) returns (Role);
   rpc UpdateUserRole (Role) returns (Role);
-  rpc UpsertCustomerInfo (Customer) returns (Customer);
+
+  rpc GetClientInfo(GetUserRequest) returns (CliInfo);
+  rpc getASCInfo(CliInfo|User) return (ASCInfo);
+  rpc UpsertASCInfo (ASCInfo) returns (ASCInfo);
+  rpc CheckClientASCInfo(CliInfo) returns (ASCInfo);
+  rpc CommitClientASCInfo(CliInfo) returns (ASCInfo);
+
 }
 
 message Role {
@@ -16,7 +21,7 @@ message Role {
   string email = 3; 
 }
 
-message Customer{
+message ASCInfo{
   int32 gis_code = 1;
   string C1_code = 2;
   string organization_name = 3;
@@ -39,6 +44,8 @@ message Customer{
   string CliInfo_ID = 20;
   string KPP = 21;
   string organization_INN =22 ;
+  string id = 23;
+  string createdAt = 24;
 }
 
 message GetUserRequest {
@@ -49,4 +56,17 @@ message User {
   string id = 1;
   string email = 2;
   string user = 3;
+}
+
+message CliInfo {
+string id = 1;
+string ASCInfo_ID = 2;
+string email = 3;
+string addres = 4;
+string organization_name = 5;
+string organization_INN = 6;
+string organization_FIO = 7;
+bool organization_agreement = 8;
+string UserModel_ID = 9;
+string createdAt = 10;
 }
