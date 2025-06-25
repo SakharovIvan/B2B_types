@@ -56,6 +56,7 @@ export interface CliInfo {
   organization_agreement: boolean;
   UserModel_ID:string;
   createdAt?: Date;
+  updatedAt?:Date;
 }
 
 export interface Roles {
