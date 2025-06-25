@@ -46,3 +46,15 @@ export interface Order {
   createdAt?: Date;
   updatedAt?: Date;
 }
+
+export interface OrderStatus{
+  id?:string;
+  SystemCheck:boolean;
+  WarrantyCheck:boolean;
+  ManagerCheck:boolean;
+  UserPayCheck:boolean;
+  UserDeliverCheck:boolean;
+  createdAt?:Date;
+  updateTimestamp?:Date;
+  UserOrderId:string;
+}
