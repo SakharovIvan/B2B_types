@@ -6,7 +6,6 @@ export enum CARD_ROUTES {
   DELETE = '',
   CHECK = '/check',
   CREATE_ORDER = '/order',
-  
 }
 
 export enum AUTH_ROUTES {
@@ -22,7 +21,8 @@ export enum AUTH_ROUTES {
   GET_USERS = '/users',
   CHECK = '/check',
   COMMIT = '/commit',
-
+  ADMIN_ASC_INFO = '/admin/asc',
+  ADMIN_CLIENT_INFO = '/admin/cli',
 }
 
 export enum ORDER_ROUTES {
