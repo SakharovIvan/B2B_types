@@ -20,13 +20,16 @@ export interface ASCInfo {
   contract_shipment: string;
   contract_shipment_date: string;
   DSO_region: number;
-  CliInfo_ID: string;
+  CliInfo_ID?: string;
   KPP: string;
   createdAt?: Date;
 }
 
 enum DSO_REGION {
-  "",
+  'Россия',
+  "Волкова",
+  "Задорожняя",
+  "Восток"
 }
 
 export enum ROLES_LIST{
@@ -56,7 +59,7 @@ export interface CliInfo {
   organization_agreement: boolean;
   UserModel_ID:string;
   createdAt?: Date;
-  updatedAt?:Date;
+  updatedAt?:Date
 }
 
 export interface Roles {
