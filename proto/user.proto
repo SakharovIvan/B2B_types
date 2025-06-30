@@ -23,7 +23,7 @@ message Role {
 }
 
 message CliInfoArray {
-  repeated CliInfo cliinfo = 1;
+  string cliinfo = 1;
 }
 
 message ASCInfo {
