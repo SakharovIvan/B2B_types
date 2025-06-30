@@ -15,6 +15,7 @@ export enum AUTH_ROUTES {
   LOGOUT = '/logout',
   ROLE = '/role',
   CLIENT_INFO = '/cli',
+  CLIENT_INFO_LIST='/cliList',
   ASC_INFO = '/asc',
   ACTIVATION_LINK = '/activate',
   REFRESH_TOKEN = '/refresh',

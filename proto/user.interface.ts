@@ -9,7 +9,7 @@ export default interface ValidUser {
 
 export interface GRPC_Client {
   FindOneByJWT(data: { accessToken: string }): Observable<ValidUser>;
-
+  getASCInfoArray(data: CliInfo): Observable<string>;
   GetUserRole(data: { accessToken: string }): Observable<Roles>;
   UpdateUserRole(data: Roles): Observable<Roles>;
   GetClientInfoByJWT(data: { accessToken: string }): Observable<CliInfo>;
