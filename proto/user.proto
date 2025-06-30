@@ -8,18 +8,22 @@ service UserService {
   rpc UpdateUserRole (Role) returns (Role);
   rpc GetClientInfoByJWT(GetUserRequest) returns (CliInfo);
 
+  rpc getASCInfoArray(CliInfo) returns (CliInfoArray);
   rpc GetClientInfo(CliInfo) returns (CliInfo);
   rpc getASCInfo(CliInfo) returns (ASCInfo);
   rpc UpsertASCInfo (ASCInfo) returns (ASCInfo);
   rpc CheckClientASCInfo(CliInfo) returns (ASCInfo);
   rpc CommitClientASCInfo(CliInfo) returns (CliInfo);
-
 }
 
 message Role {
   bool admin = 1;
   string type = 2;
   string email = 3; 
+}
+
+message CliInfoArray {
+  repeated CliInfo cliinfo = 1;
 }
 
 message ASCInfo {
