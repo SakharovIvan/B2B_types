@@ -36,5 +36,8 @@ export enum ORDER_ROUTES {
 export enum ADMIN_ROUTES {
   MAIN='/api/admin',
   ORDER_LIST = '/api/admin/order',
-  SP_UPDATE='/sparepart',
+  SP='/sparepart',
+  SP_UPDATE='/update',
+  SP_ANALOG='/analog',
+
 }
