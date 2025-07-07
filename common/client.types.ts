@@ -25,13 +25,13 @@ export interface ASCInfo {
   createdAt?: Date;
 }
 
-enum DSO_REGION {
+export enum DSO_REGION {
   'Россия',
   "Волкова",
   "Задорожняя",
   "Восток"
 }
-enum DSO_REGION_EMAIL{
+export enum DSO_REGION_EMAIL{
   'Россия'='i.sakharov@kls.gr.ru',
   "Волкова"='m.volkova@kls-gr.ru',
   "Задорожняя"='e.zadorozhnyaya@kls-gr.ru',
