@@ -32,7 +32,7 @@ export enum DSO_REGION {
   "Восток"
 }
 export enum DSO_REGION_EMAIL{
-  'Россия'='i.sakharov@kls.gr.ru',
+  'Россия'='i.sakharov@kls-gr.ru',
   "Волкова"='m.volkova@kls-gr.ru',
   "Задорожняя"='e.zadorozhnyaya@kls-gr.ru',
   "Восток"='vostok@kls-gr.ru',
