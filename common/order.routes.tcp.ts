@@ -1,5 +1,5 @@
 export enum Order_cmd{
-    create_order='create_order',
+    create_order='create_order_from_card',
     update='update_order',
     get_orders_list='get_orders_list',
     get_order_content='get_order_info',
