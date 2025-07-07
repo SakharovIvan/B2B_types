@@ -31,6 +31,12 @@ enum DSO_REGION {
   "Задорожняя",
   "Восток"
 }
+enum DSO_REGION_EMAIL{
+  'Россия'='i.sakharov@kls.gr.ru',
+  "Волкова"='m.volkova@kls-gr.ru',
+  "Задорожняя"='e.zadorozhnyaya@kls-gr.ru',
+  "Восток"='vostok@kls-gr.ru',
+}
 
 export enum ROLES_LIST{
   "ASC",
