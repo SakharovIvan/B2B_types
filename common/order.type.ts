@@ -58,3 +58,8 @@ export interface OrderStatus{
   updateTimestamp?:Date;
   UserOrderId:string;
 }
+
+export enum ORDER_MAIL_VIEWS{
+  'CREATED',
+  'UPDATED'
+}
