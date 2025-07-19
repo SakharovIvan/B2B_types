@@ -15,7 +15,7 @@ export enum AUTH_ROUTES {
   LOGOUT = '/logout',
   ROLE = '/role',
   CLIENT_INFO = '/cli',
-  CLIENT_INFO_LIST='/cliList',
+  CLIENT_INFO_LIST = '/cliList',
   ASC_INFO = '/asc',
   ACTIVATION_LINK = '/activate',
   REFRESH_TOKEN = '/refresh',
@@ -31,13 +31,18 @@ export enum ORDER_ROUTES {
   POST = '/update',
   GET = '',
   INFO = '/info',
+  C1 = '/c1',
+  ORDER_POOL_GET = C1+'/order_pool',
+  ORDER_POOL_POST = C1+'/order_pool',
+  ORDER_POOL_GET_TEST = C1+'/test/order_pool',
+  ORDER_POOL_POST_TEST = C1+'/test/order_pool',
+  ORDER_POOL_CLEAR = C1+'/test/order_pool/clear',
 }
 
 export enum ADMIN_ROUTES {
-  MAIN='/api/admin',
+  MAIN = '/api/admin',
   ORDER_LIST = '/api/admin/order',
-  SP='/sparepart',
-  SP_UPDATE='/update',
-  SP_ANALOG='/analog',
-
+  SP = '/sparepart',
+  SP_UPDATE = '/update',
+  SP_ANALOG = '/analog',
 }
