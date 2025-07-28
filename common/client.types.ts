@@ -26,6 +26,7 @@ export interface ASCInfo {
 }
 
 export enum DSO_REGION {
+  '',
   'Россия',
   "Волкова",
   "Задорожняя",
