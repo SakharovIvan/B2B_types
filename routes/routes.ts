@@ -6,6 +6,8 @@ export enum CARD_ROUTES {
   DELETE = '',
   CHECK = '/check',
   CREATE_ORDER = '/order',
+  USER_FAVOURITE='/favourite',
+  
 }
 
 export enum AUTH_ROUTES {
