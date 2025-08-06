@@ -7,5 +7,6 @@ export enum Card_cmd{
     get_admin_card='get_card_admin',//+
     create_order='create_order',//+
     user_upd_favorite='user_upd_favorite',
+    user_get_favorite='user_get_favorite',
     warehouse_upd_favorite_List='warehouse_upd_favorite_List'
 }
