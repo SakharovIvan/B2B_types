@@ -10,8 +10,16 @@ export interface SparePart extends spmatNo {
   warehousestatus: string;
   warehouseqty: number;
   c1name: string;
+  type:SPMATNO_TYPES;
   tags: string[];
   updatedAt?: Date;
+}
+
+export enum SPMATNO_TYPES{
+  UNDEFINED,
+  SPARE_PART,
+  TOOL,
+  ACCESSORY
 }
 
 
