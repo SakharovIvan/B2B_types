@@ -1,3 +1,5 @@
+import { SPMATNO_TYPES } from './sparePart.type';
+
 export interface ASCInfo {
   id?: string;
   gis_code: number;
@@ -25,34 +27,102 @@ export interface ASCInfo {
   createdAt?: Date;
 }
 
+export interface Customer_LegalInfo {
+  id?: string;
+  gis_code: number;
+  C1_code: string;
+  organization_name: string;
+  organization_INN: string;
+  DSO_region: number;
+  CliInfo_ID?: string;
+  KPP: string;
+  closed: boolean;
+
+  updatedAt?: Date;
+  createdAt?: Date;
+}
+
+export interface Shipment {
+  id?: string;
+  C1_code: string;
+  Indeks: string;
+  addres: string;
+  Tlf: string;
+  email: string;
+  closed: boolean;
+  main: boolean;
+
+  Customer_LegalInfo_id: string;
+  createdAt?: Date;
+  updatedat?: Date;
+}
+
+export interface Contract {
+  id?: string;
+  C1_code: string;
+  name: string;
+  contract_date: string;
+  closed: boolean;
+  type: SPMATNO_TYPES;
+  main: boolean;
+
+  Customer_LegalInfo_id?: string;
+  createdAt?: Date;
+  updatedat?: Date;
+}
+
+export interface Discount {
+  id?: string;
+  C1_code: string;
+  discount: number;
+  closed: boolean;
+
+  contract_id: string;
+  createdAt?: Date;
+  updatedat?: Date;
+}
+
+
+
+export interface Bank {
+id?:string;
+Raschet_schet_bank:string;
+Korr_schet_bank:string;
+BIK_bank:string;
+Name_bank:string;
+
+createdAt?:Date;
+updatedat?:Date;
+asc_info_id:string;
+}
+
 export enum DSO_REGION {
-  "",
+  '',
   'Россия',
-  "Волкова",
-  "Задорожняя",
-  "Восток"
+  'Волкова',
+  'Задорожняя',
+  'Восток',
 }
-export enum DSO_REGION_EMAIL{
-  'Россия'='i.sakharov@kls-gr.ru',
-  "Волкова"='m.volkova@kls-gr.ru',
-  "Задорожняя"='e.zadorozhnyaya@kls-gr.ru',
-  "Восток"='vostok@kls-gr.ru',
-}
-
-export enum ROLES_LIST{
-  "ASC",
-  "ADMIN"
+export enum DSO_REGION_EMAIL {
+  'Россия' = 'i.sakharov@kls-gr.ru',
+  'Волкова' = 'm.volkova@kls-gr.ru',
+  'Задорожняя' = 'e.zadorozhnyaya@kls-gr.ru',
+  'Восток' = 'vostok@kls-gr.ru',
 }
 
-export interface UserModel{
-  id:string;
-  email:string;
-  password:string;
+export enum ROLES_LIST {
+  'ASC',
+  'ADMIN',
+}
+
+export interface UserModel {
+  id: string;
+  email: string;
+  password: string;
   isActivated: boolean;
   activationLink: string;
   createdAt: Date;
   updatedAt: Date;
-
 }
 
 export interface CliInfo {
@@ -64,9 +134,9 @@ export interface CliInfo {
   organization_INN: string;
   organization_FIO: string;
   organization_agreement: boolean;
-  UserModel_ID:string;
+  UserModel_ID: string;
   createdAt?: Date;
-  updatedAt?:Date
+  updatedAt?: Date;
 }
 
 export interface Roles {
@@ -78,4 +148,6 @@ export interface Roles {
   updatedAt?: Date;
 }
 
-export interface registrationInfo extends Partial<CliInfo>,Partial<UserModel>{}
+export interface registrationInfo
+  extends Partial<CliInfo>,
+    Partial<UserModel> {}
