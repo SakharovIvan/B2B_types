@@ -27,30 +27,7 @@ message CliInfoArray {
 }
 
 message ASCInfo {
-  int32 gis_code = 4;
-  string C1_code = 5;
-  string organization_name = 6;
-  string Indeks = 7;
-  string addres = 8;
-  string Tlf = 10;
-  string email = 11;
-  string Raschet_schet_bank = 12;
-  string Korr_schet_bank = 13;
-  string BIK_bank = 14;
-  string Name_bank = 15;
-  string OKPO = 16;
-  string email_2 = 17;
-  int32 skid = 18;
-  string contract_DSO = 19;
-  string contract_DSO_date = 20;
-  string contract_shipment = 21;
-  string contract_shipment_date = 22;
-  int32 DSO_region = 23;
-  string CliInfo_ID = 24;
-  string KPP = 25;
-  string organization_INN = 26;
-  string id = 27;
-  string createdAt = 28;
+  string ascInfo = 1;
 }
 
 message GetUserRequest {

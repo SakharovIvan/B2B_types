@@ -14,8 +14,8 @@ export interface GRPC_Client {
   UpdateUserRole(data: Roles): Observable<Roles>;
   GetClientInfoByJWT(data: { accessToken: string }): Observable<CliInfo>;
   GetClientInfo(data: CliInfo): Observable<CliInfo>;
-  getASCInfo(data: CliInfo): Observable<ASCInfo>;
-  UpsertASCInfo(data: ASCInfo): Observable<ASCInfo>;
-  CheckClientASCInfo(data: Partial<CliInfo>): Observable<ASCInfo>;
-  CommitClientASCInfo(data: Partial<CliInfo>): Observable<ASCInfo>;
+  getASCInfo(data: CliInfo): Observable<string>;
+  UpsertASCInfo(data: ASCInfo): Observable<string>;
+  CheckClientASCInfo(data: Partial<CliInfo>): Observable<string>;
+  CommitClientASCInfo(data: Partial<CliInfo>): Observable<string>;
 }

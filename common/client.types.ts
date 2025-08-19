@@ -37,27 +37,27 @@ export interface Customer_LegalInfo {
   CliInfo_ID?: string;
   KPP: string;
   closed: boolean;
-
   updatedAt?: Date;
   createdAt?: Date;
 }
 
-export interface Shipment {
+export interface Customer_Shipment {
   id?: string;
   C1_code: string;
-  Indeks: string;
+  Indeks?: string;
+  city: string;
   addres: string;
   Tlf: string;
   email: string;
+  transpport_company: string;
   closed: boolean;
   main: boolean;
-
   Customer_LegalInfo_id: string;
   createdAt?: Date;
   updatedat?: Date;
 }
 
-export interface Contract {
+export interface Customer_Contract {
   id?: string;
   C1_code: string;
   name: string;
@@ -65,35 +65,37 @@ export interface Contract {
   closed: boolean;
   type: SPMATNO_TYPES;
   main: boolean;
-
   Customer_LegalInfo_id?: string;
   createdAt?: Date;
   updatedat?: Date;
 }
 
-export interface Discount {
+export interface Customer_Discount {
   id?: string;
   C1_code: string;
   discount: number;
   closed: boolean;
-
   contract_id: string;
   createdAt?: Date;
   updatedat?: Date;
 }
 
+export interface Customer_Bank {
+  id?: string;
+  Raschet_schet_bank: string;
+  Korr_schet_bank: string;
+  BIK_bank: string;
+  Name_bank: string;
+  Customer_LegalInfo_id: string;
+  createdAt?: Date;
+  updatedat?: Date;
+}
 
-
-export interface Bank {
-id?:string;
-Raschet_schet_bank:string;
-Korr_schet_bank:string;
-BIK_bank:string;
-Name_bank:string;
-
-createdAt?:Date;
-updatedat?:Date;
-asc_info_id:string;
+export interface Customer_Info extends Customer_LegalInfo {
+  Customer_Contract: Customer_Contract[];
+  Customer_Bank: Customer_Bank[];
+  Customer_Discount: Customer_Discount[];
+  Customer_Shipment: Customer_Shipment[];
 }
 
 export enum DSO_REGION {
@@ -128,6 +130,7 @@ export interface UserModel {
 export interface CliInfo {
   id?: string;
   ASCInfo_ID: string;
+  Customer_LegalInfo_id: string;
   email: string;
   addres: string;
   organization_name: string;
