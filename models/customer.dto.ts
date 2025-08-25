@@ -16,10 +16,8 @@ export class Customer_Info_DTO {
   Customer_Discount: Partial<Customer_Discount>;
   Customer_Bank: Partial<Customer_Bank>;
   constructor() {}
-
   init_Customer_Info(data: Partial<Customer_Info>) {
     this.Customer_LegalInfo = {
-      id:data.id||'',
       gis_code: data.gis_code || 0,
       C1_code: data.C1_code || '',
       organization_name: data.organization_name || '',
@@ -29,6 +27,9 @@ export class Customer_Info_DTO {
       KPP: data.KPP || '',
       closed: data.closed || false,
     };
+    if(data.id){
+      this.Customer_LegalInfo.id=data.id
+    }
     data.Customer_Shipment
       ? (this.Customer_Shipment = data.Customer_Shipment[0])
       : null;
@@ -48,7 +49,6 @@ export class Customer_Info_DTO {
       organization_name: data.organization_name,
       organization_INN: data.organization_INN,
       DSO_region: data.DSO_region,
-      CliInfo_ID: data.CliInfo_ID,
       KPP: data.KPP,
       closed: false,
     };
@@ -99,4 +99,5 @@ this.Customer_LegalInfo.CliInfo_ID=CliInfo_ID
   set_contract_id(contract_id: string) {
     this.Customer_Discount.contract_id = contract_id;
   }
+
 }
