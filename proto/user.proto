@@ -51,4 +51,5 @@ string organization_FIO = 7;
 bool organization_agreement = 8;
 string UserModel_ID = 9;
 string createdAt = 10;
+string Customer_LegalInfo_id = 11;
 }

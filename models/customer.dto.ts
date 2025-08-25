@@ -93,6 +93,9 @@ export class Customer_Info_DTO {
     this.Customer_Contract.Customer_LegalInfo_id = Customer_LegalInfo_id;
     this.Customer_Bank.Customer_LegalInfo_id = Customer_LegalInfo_id;
   }
+  set_CliInfo_ID(CliInfo_ID:string){
+this.Customer_LegalInfo.CliInfo_ID=CliInfo_ID
+  }
   set_contract_id(contract_id: string) {
     this.Customer_Discount.contract_id = contract_id;
   }
