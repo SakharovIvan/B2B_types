@@ -12,7 +12,7 @@ export class Card_upd_dto implements CardStructure {
       if(el.qty&&typeof el.qty !=='number'){return}
       this.card.push({
         spmatNo: el.spmatNo,
-        qty: el.qty,
+        qty: Number(el.qty),
         Warranty: el.Warranty || false,
         WarrantyRepNo: el.WarrantyRepNo || null,
         UserComment: el.UserComment || null,
