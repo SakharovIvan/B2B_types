@@ -9,7 +9,7 @@ export class Card_upd_dto implements CardStructure {
   }
   private card_init(data) {
     data.forEach((el) => {
-      if(el.qty&&typeof el.qty !=='number'){return}
+      if(!Number(el.qty)){return}
       this.card.push({
         spmatNo: el.spmatNo,
         qty: Number(el.qty),
