@@ -9,12 +9,14 @@ export class Card_upd_dto implements CardStructure {
   }
   private card_init(data) {
     data.forEach((el) => {
-      if (!Number(el.qty) && el.qty) {
-        return;
+      let product: Partial<product> = {};
+
+      if (el.qty) {
+        product.qty = Number(el.qty);
       }
       this.card.push({
         ...el,
-        qty: Number(el.qty),
+        ...product,
       });
     });
   }
