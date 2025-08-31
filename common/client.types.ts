@@ -34,7 +34,7 @@ export interface Customer_LegalInfo {
   organization_name: string;
   organization_INN: string;
   DSO_region: number;
-  CliInfo_ID?: string;
+  CliInfo_ID?: string|null;
   KPP: string;
   closed: boolean;
   updatedAt?: Date;
