@@ -1,4 +1,7 @@
-import { C1_Order, C1_order_req } from "./order.type";
+import ValidUser from '../proto/user.interface';
+import { CardRowed } from './card.types';
+import { ASCInfo, Customer_Info } from './client.types';
+import { C1_Order, C1_order_req } from './order.type';
 
 export enum Order_cmd {
   create_order = 'create_order_from_card',
@@ -12,26 +15,24 @@ export enum Order_cmd {
   c1_clear_order_test = 'c1_clear_order_test',
 }
 
-export interface Order_cmd_int{
-    cmd:Order_cmd,
-    request?:Partial<C1_Order>
-    data?:C1_order_req
+export interface Order_cmd_int {
+  cmd: Order_cmd;
+  request?: Partial<C1_Order>;
+  data?: C1_order_req;
 }
 
 export interface create_order {
-  data: {
-    card: Object[];
-    email: string;
-  };
+  card: CardRowed[];
+  user: ValidUser;
+  ascInfo: Required<Customer_Info>;
 }
 
 export interface get_order_list {
-  data: {
-    filters: Object;
-    options?: { offset: number; limit: number };
-  };
+  filters: Object;
+  options?: { offset: number; limit: number };
 }
 
 export interface get_order_content {
-  data: { email: string; OrderNo: number };
+  email: string;
+  OrderNo: number;
 }

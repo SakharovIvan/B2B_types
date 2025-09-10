@@ -1,5 +1,4 @@
 import { product } from './card.types';
-import { ASCInfo } from './client.types';
 
 interface C1_Order_Main {
   id?: string;
@@ -7,6 +6,7 @@ interface C1_Order_Main {
   status: number;
   GUID_1C: string;
 }
+
 export interface C1_Order extends C1_Order_Main {
   OrderNo: number;
   B2b_id: string;
@@ -35,11 +35,12 @@ export interface C1_OrderMatNo {
   price_rate_NDS: number;
   price_sum_NDS: number;
   price_sum: number;
+
   createdAt?: Date;
   updatedAt?: Date;
 }
 export interface C1_order_req extends C1_Order_Main {
-  User_info?: ASCInfo;
+  User_info?: OrderCustomer;
   content: C1_OrderMatNo[];
   SumPriceNDS: number;
   SumPrice_NDS: number;
@@ -55,8 +56,7 @@ export interface OrderMatNo extends product {
 }
 
 export interface C1_Order_Info extends C1_Order {
-  User_info?: ASCInfo;
-
+  User_info: OrderCustomer|null;
   products: C1_OrderMatNo[];
 }
 
@@ -78,6 +78,15 @@ export interface OrderStatus {
   createdAt?: Date;
   updateTimestamp?: Date;
   UserOrderId: string;
+}
+
+export interface OrderCustomer {
+  id?:string;
+  UserOrderId:string
+  Customer_LegalInfo_id:string
+  Customer_Shipment_id:string
+  Customer_Contract_id:string
+  Customer_Bank_id:string
 }
 
 export enum ORDER_MAIL_VIEWS {
