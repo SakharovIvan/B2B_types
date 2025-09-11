@@ -34,7 +34,7 @@ export interface Customer_LegalInfo {
   organization_name: string;
   organization_INN: string;
   DSO_region: number;
-  CliInfo_ID?: string|null;
+  CliInfo_ID?: string | null;
   KPP: string;
   closed: boolean;
   updatedAt?: Date;
@@ -96,6 +96,16 @@ export interface Customer_Info extends Customer_LegalInfo {
   Customer_Bank: Customer_Bank[];
   Customer_Discount: Customer_Discount[];
   Customer_Shipment: Customer_Shipment[];
+}
+
+
+
+export interface Customer_Order_Info {
+  Customer_LegalInfo: Customer_LegalInfo;
+  Customer_Contract: Customer_Contract;
+  Customer_Bank: Customer_Bank;
+  Customer_Discount: Customer_Discount;
+  Customer_Shipment: Customer_Shipment;
 }
 
 export enum DSO_REGION {

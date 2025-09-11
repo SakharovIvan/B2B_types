@@ -18,4 +18,5 @@ export interface GRPC_Client {
   UpsertASCInfo({ascInfo}): Observable<string>;
   CheckClientASCInfo(data: Partial<CliInfo>): Observable<string>;
   CommitClientASCInfo(data: Partial<CliInfo>): Observable<string>;
+  CustomerInfo({ascInfo}):Observable<{ascInfo}>
 }
