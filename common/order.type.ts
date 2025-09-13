@@ -42,6 +42,10 @@ export interface C1_OrderMatNo {
 export interface C1_order_req extends C1_Order_Main {
   User_info?: OrderCustomer;
   content: C1_OrderMatNo[];
+  sum_wo_skid:number;
+sum_skid:number;
+sum_NDS:number;
+sum:number;
   SumPriceNDS: number;
   SumPrice_NDS: number;
   SumPrice_wo_NDS: number;
