@@ -101,11 +101,11 @@ export interface Customer_Info extends Customer_LegalInfo {
 
 
 export interface Customer_Order_Info {
-  Customer_LegalInfo: Customer_LegalInfo;
-  Customer_Contract: Customer_Contract;
-  Customer_Bank: Customer_Bank;
-  Customer_Discount: Customer_Discount;
-  Customer_Shipment: Customer_Shipment;
+  Customer_LegalInfo: Customer_LegalInfo|null;
+  Customer_Contract: Customer_Contract|null;
+  Customer_Bank: Customer_Bank|null;
+  Customer_Discount: Customer_Discount|null;
+  Customer_Shipment: Customer_Shipment|null;
 }
 
 export enum DSO_REGION {
