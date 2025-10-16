@@ -86,11 +86,11 @@ export interface OrderStatus {
 
 export interface OrderCustomer {
   id?:string;
-  UserOrderId:string
-  Customer_LegalInfo_id:string
-  Customer_Shipment_id:string
-  Customer_Contract_id:string
-  Customer_Bank_id:string
+  UserOrderId?:string
+  Customer_LegalInfo_id?:string
+  Customer_Shipment_id?:string
+  Customer_Contract_id?:string
+  Customer_Bank_id?:string
 }
 
 export enum ORDER_MAIL_VIEWS {
