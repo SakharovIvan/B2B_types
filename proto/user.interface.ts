@@ -1,5 +1,5 @@
 import { Observable } from 'rxjs';
-import { CliInfo, Roles } from '../common/client.types';
+import { CliInfo, Customer_Info, Roles } from '../common/client.types';
 import { ASCInfo } from '../common/client.types';
 export default interface ValidUser {
   id: string;
@@ -15,8 +15,11 @@ export interface GRPC_Client {
   GetClientInfoByJWT(data: { accessToken: string }): Observable<CliInfo>;
   GetClientInfo(data: Partial<CliInfo>): Observable<CliInfo>;
   getASCInfo(data: Partial<CliInfo>): Observable<string>;
-  UpsertASCInfo({ascInfo}): Observable<string>;
+  UpsertASCInfo({ ascInfo }): Observable<string>;
   CheckClientASCInfo(data: Partial<CliInfo>): Observable<string>;
   CommitClientASCInfo(data: Partial<CliInfo>): Observable<string>;
-  CustomerInfo({ascInfo}):Observable<{ascInfo}>
+  getCustomer_Info(
+    data: Partial<Customer_Info | { limit: number; offset: number }>,
+  ): Observable<string>;
+  CustomerInfo({ ascInfo }): Observable<{ ascInfo }>;
 }

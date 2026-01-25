@@ -6,8 +6,7 @@ export enum CARD_ROUTES {
   DELETE = '',
   CHECK = '/check',
   CREATE_ORDER = '/order',
-  USER_FAVOURITE='/favourite',
-  
+  USER_FAVOURITE = '/favourite',
 }
 
 export enum AUTH_ROUTES {
@@ -19,6 +18,7 @@ export enum AUTH_ROUTES {
   CLIENT_INFO = '/cli',
   CLIENT_INFO_LIST = '/cliList',
   ASC_INFO = '/asc',
+  ASC_INFO_LIST = '/asc/list',
   ACTIVATION_LINK = '/activate',
   REFRESH_TOKEN = '/refresh',
   GET_USERS = '/users',
@@ -34,11 +34,11 @@ export enum ORDER_ROUTES {
   GET = '',
   INFO = '/info',
   C1 = '/c1',
-  ORDER_POOL_GET = C1+'/order_pool',
-  ORDER_POOL_POST = C1+'/order_pool',
-  ORDER_POOL_GET_TEST = C1+'/test/order_pool',
-  ORDER_POOL_POST_TEST = C1+'/test/order_pool',
-  ORDER_POOL_CLEAR = C1+'/test/order_pool/clear',
+  ORDER_POOL_GET = C1 + '/order_pool',
+  ORDER_POOL_POST = C1 + '/order_pool',
+  ORDER_POOL_GET_TEST = C1 + '/test/order_pool',
+  ORDER_POOL_POST_TEST = C1 + '/test/order_pool',
+  ORDER_POOL_CLEAR = C1 + '/test/order_pool/clear',
 }
 
 export enum ADMIN_ROUTES {
