@@ -12,6 +12,7 @@ export enum Order_cmd {
   c1_upd_order = 'c1_upd_order',
   c1_get_order_test = 'c1_get_order_test',
   c1_upd_order_test = 'c1_upd_order_test',
+  status = 'c1_status',
   c1_clear_order_test = 'c1_clear_order_test',
 }
 
