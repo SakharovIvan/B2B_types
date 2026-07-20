@@ -24,6 +24,7 @@ export interface Order_cmd_int {
 
 export interface create_order {
   card: CardRowed[];
+  comment: string;
   user: ValidUser;
   ascInfo: Required<Customer_Info>;
 }
