@@ -42,10 +42,10 @@ export interface C1_OrderMatNo {
 export interface C1_order_req extends C1_Order_Main {
   User_info?: OrderCustomer;
   content: C1_OrderMatNo[];
-  sum_wo_skid:number;
-sum_skid:number;
-sum_NDS:number;
-sum:number;
+  sum_wo_skid: number;
+  sum_skid: number;
+  sum_NDS: number;
+  sum: number;
   SumPriceNDS: number;
   SumPrice_NDS: number;
   SumPrice_wo_NDS: number;
@@ -60,7 +60,7 @@ export interface OrderMatNo extends product {
 }
 
 export interface C1_Order_Info extends C1_Order {
-  User_info: OrderCustomer|null;
+  User_info: OrderCustomer | null;
   products: C1_OrderMatNo[];
 }
 
@@ -68,6 +68,7 @@ export interface Order {
   id?: string;
   email: string;
   OrderNo: number;
+  comment: string;
   createdAt?: Date;
   updatedAt?: Date;
 }
@@ -85,12 +86,12 @@ export interface OrderStatus {
 }
 
 export interface OrderCustomer {
-  id?:string;
-  UserOrderId?:string
-  Customer_LegalInfo_id?:string
-  Customer_Shipment_id?:string
-  Customer_Contract_id?:string
-  Customer_Bank_id?:string
+  id?: string;
+  UserOrderId?: string;
+  Customer_LegalInfo_id?: string;
+  Customer_Shipment_id?: string;
+  Customer_Contract_id?: string;
+  Customer_Bank_id?: string;
 }
 
 export enum ORDER_MAIL_VIEWS {
