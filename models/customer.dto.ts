@@ -23,7 +23,7 @@ export class Customer_Info_DTO {
       organization_name: data.organization_name || '',
       organization_INN: data.organization_INN || '',
       DSO_region: data.DSO_region || 0,
-      CliInfo_ID: data.CliInfo_ID || null,
+      CliInfo_ID: data.CliInfo_ID || 'null',
       KPP: data.KPP || '',
       closed: data.closed || false,
     };
